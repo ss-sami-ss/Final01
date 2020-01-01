@@ -68,11 +68,11 @@
     <Compile Include="DomainModel\DTO\EF\Person.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DomainModel\POCO\PersonCrud.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DomainModel\DTO\MetaData\" />
-    <Folder Include="DomainModel\POCO\" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DomainModel\DTO\EF\Model1.edmx">
