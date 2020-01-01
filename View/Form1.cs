@@ -31,13 +31,34 @@ namespace View
         }
         #endregion
 
+        #region [- btnRefresh_Click -]
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            FillGrid();
+        } 
+        #endregion
 
-        }
+        #region [- FillGrid() -]
         private void FillGrid()
         {
             dgvPerson.DataSource = Ref_PersonViewModel.FillGrid();
+            txtFirstName.Text = string.Empty;
+            txtLastName.Text = string.Empty;
+            txtIdentityCode.Text = string.Empty;
+            txtTelNumber.Text = string.Empty;
+            txtPhoneNumber.Text = string.Empty;
+            txtFirstName.Focus();
         }
+
+        #endregion
+
+        #region [- btnSave_Click -]
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Ref_PersonViewModel.Save(txtFirstName.Text, txtLastName.Text,txtIdentityCode.Text,
+                txtTelNumber.Text,txtPhoneNumber.Text);
+            MessageBox.Show("Your Contact Are Expanded");
+        } 
+        #endregion
     }
 }
