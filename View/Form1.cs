@@ -58,7 +58,31 @@ namespace View
             Ref_PersonViewModel.Save(txtFirstName.Text, txtLastName.Text,txtIdentityCode.Text,
                 txtTelNumber.Text,txtPhoneNumber.Text);
             MessageBox.Show("Your Contact Are Expanded");
+        }
+        #endregion
+
+        #region [- btnExit_Click -]
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #endregion
+
+        #region [- btnEdit_Click -]
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        #endregion
+
+        #region [- btnDelete_Click -]
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
         } 
         #endregion
     }
+
 }

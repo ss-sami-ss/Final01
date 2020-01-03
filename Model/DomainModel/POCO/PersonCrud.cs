@@ -14,6 +14,7 @@ namespace Model.DomainModel.POCO
 
         }
         #endregion
+
         #region [- Tasks -]
         #region [- SelectAll() -]
         public List<Model.DomainModel.DTO.EF.Person> SelectAll()
@@ -37,10 +38,12 @@ namespace Model.DomainModel.POCO
 
             }
         }
-        #endregion 
-        public void Inser(string fName,string lName,string identityCode,string  telNumber,string phoneNumber)
+        #endregion
+
+        #region [- Inser(string fName, string lName, string identityCode, string telNumber, string phoneNumber) -]
+        public void Inser(string fName, string lName, string identityCode, string telNumber, string phoneNumber)
         {
-            using (var contect=new Model.DomainModel.DTO.EF.ContactEntities())
+            using (var context = new Model.DomainModel.DTO.EF.ContactEntities())
             {
                 try
                 {
@@ -50,8 +53,8 @@ namespace Model.DomainModel.POCO
                     person.IdentityCode = identityCode;
                     person.TelephoneNumber = telNumber;
                     person.PhoneNumber = phoneNumber;
-                    contect.Person.Add(person);
-                    contect.SaveChanges();
+                    context.Person.Add(person);
+                    context.SaveChanges();
 
                 }
                 catch (Exception)
@@ -61,11 +64,13 @@ namespace Model.DomainModel.POCO
                 }
                 finally
                 {
-                    contect.Dispose();
+                    context.Dispose();
                 }
 
             }
         }
+        #endregion
+
 
 
         #endregion

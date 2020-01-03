@@ -49,9 +49,9 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(262, 46);
+            this.btnRefresh.Location = new System.Drawing.Point(259, 374);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(109, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(141, 33);
             this.btnRefresh.TabIndex = 0;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -59,9 +59,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(124, 46);
+            this.btnSave.Location = new System.Drawing.Point(112, 374);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(109, 23);
+            this.btnSave.Size = new System.Drawing.Size(141, 33);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -69,69 +69,70 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(394, 46);
+            this.btnEdit.Location = new System.Drawing.Point(406, 374);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(109, 23);
+            this.btnEdit.Size = new System.Drawing.Size(141, 33);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(524, 46);
+            this.btnDelete.Location = new System.Drawing.Point(553, 374);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(109, 23);
+            this.btnDelete.Size = new System.Drawing.Size(141, 33);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(124, 129);
+            this.txtFirstName.Location = new System.Drawing.Point(109, 56);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(310, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(156, 20);
             this.txtFirstName.TabIndex = 4;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(124, 185);
+            this.txtLastName.Location = new System.Drawing.Point(109, 112);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(310, 20);
+            this.txtLastName.Size = new System.Drawing.Size(156, 20);
             this.txtLastName.TabIndex = 5;
             // 
             // txtIdentityCode
             // 
-            this.txtIdentityCode.Location = new System.Drawing.Point(124, 240);
+            this.txtIdentityCode.Location = new System.Drawing.Point(109, 167);
             this.txtIdentityCode.Name = "txtIdentityCode";
-            this.txtIdentityCode.Size = new System.Drawing.Size(310, 20);
+            this.txtIdentityCode.Size = new System.Drawing.Size(156, 20);
             this.txtIdentityCode.TabIndex = 6;
             // 
             // txtTelNumber
             // 
-            this.txtTelNumber.Location = new System.Drawing.Point(124, 296);
+            this.txtTelNumber.Location = new System.Drawing.Point(109, 223);
             this.txtTelNumber.Name = "txtTelNumber";
-            this.txtTelNumber.Size = new System.Drawing.Size(310, 20);
+            this.txtTelNumber.Size = new System.Drawing.Size(156, 20);
             this.txtTelNumber.TabIndex = 7;
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(124, 355);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(109, 282);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(310, 20);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(156, 20);
             this.txtPhoneNumber.TabIndex = 8;
             // 
             // dgvPerson
             // 
             this.dgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPerson.Location = new System.Drawing.Point(460, 129);
+            this.dgvPerson.Location = new System.Drawing.Point(271, 56);
             this.dgvPerson.Name = "dgvPerson";
-            this.dgvPerson.Size = new System.Drawing.Size(311, 246);
+            this.dgvPerson.Size = new System.Drawing.Size(636, 246);
             this.dgvPerson.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 135);
+            this.label1.Location = new System.Drawing.Point(9, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 10;
@@ -140,7 +141,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 192);
+            this.label2.Location = new System.Drawing.Point(9, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 11;
@@ -149,7 +150,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 243);
+            this.label3.Location = new System.Drawing.Point(9, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 12;
@@ -158,7 +159,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 299);
+            this.label4.Location = new System.Drawing.Point(5, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 13;
@@ -167,7 +168,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 362);
+            this.label5.Location = new System.Drawing.Point(9, 289);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 14;
@@ -175,18 +176,19 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(662, 46);
+            this.btnExit.Location = new System.Drawing.Point(700, 374);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(109, 23);
+            this.btnExit.Size = new System.Drawing.Size(141, 33);
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(919, 450);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
