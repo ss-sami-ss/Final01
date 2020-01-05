@@ -27,6 +27,8 @@ namespace View
         #region [- Form1_Load -]
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'contactDataSet.Person' table. You can move, or remove it, as needed.
+            this.personTableAdapter.Fill(this.contactDataSet.Person);
             FillGrid();
         }
         #endregion

@@ -19,7 +19,7 @@ namespace Model.DomainModel.POCO
         #region [- SelectAll() -]
         public List<Model.DomainModel.DTO.EF.Person> SelectAll()
         {
-            using (var context = new Model.DomainModel.DTO.EF.ContactEntities())
+            using (var context = new Model.DomainModel.DTO.EF.ContactEntities1())
             {
                 try
                 {
@@ -43,7 +43,7 @@ namespace Model.DomainModel.POCO
         #region [- Inser(string fName, string lName, string identityCode, string telNumber, string phoneNumber) -]
         public void Inser(string fName, string lName, string identityCode, string telNumber, string phoneNumber)
         {
-            using (var context = new Model.DomainModel.DTO.EF.ContactEntities())
+            using (var context = new Model.DomainModel.DTO.EF.ContactEntities1())
             {
                 try
                 {

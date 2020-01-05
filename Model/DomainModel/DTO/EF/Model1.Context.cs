@@ -13,10 +13,10 @@ namespace Model.DomainModel.DTO.EF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ContactEntities : DbContext
+    public partial class ContactEntities1 : DbContext
     {
-        public ContactEntities()
-            : base("name=ContactEntities")
+        public ContactEntities1()
+            : base("name=ContactEntities1")
         {
         }
     
