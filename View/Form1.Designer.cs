@@ -120,6 +120,7 @@
             this.txtIdentityCode.Name = "txtIdentityCode";
             this.txtIdentityCode.Size = new System.Drawing.Size(156, 20);
             this.txtIdentityCode.TabIndex = 6;
+            this.txtIdentityCode.TextChanged += new System.EventHandler(this.txtIdentityCode_TextChanged);
             // 
             // txtTelNumber
             // 
@@ -127,6 +128,7 @@
             this.txtTelNumber.Name = "txtTelNumber";
             this.txtTelNumber.Size = new System.Drawing.Size(156, 20);
             this.txtTelNumber.TabIndex = 7;
+            this.txtTelNumber.TextChanged += new System.EventHandler(this.txtTelNumber_TextChanged);
             // 
             // txtPhoneNumber
             // 
@@ -134,6 +136,7 @@
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(156, 20);
             this.txtPhoneNumber.TabIndex = 8;
+            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             // 
             // dgvPerson
             // 

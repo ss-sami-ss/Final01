@@ -140,6 +140,44 @@ namespace View
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+        #endregion
+
+        #region [- txtIdentityCode_TextChanged -]
+        private void txtIdentityCode_TextChanged(object sender, EventArgs e)
+        {
+            txtIdentityCode.MaxLength = 10;
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtIdentityCode.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txtIdentityCode.Text = txtIdentityCode.Text.Remove(txtIdentityCode.Text.Length - 1);
+            }
+        } 
+        #endregion
+
+        #region [- txtTelNumber_TextChanged -]
+        private void txtTelNumber_TextChanged(object sender, EventArgs e)
+        {
+            txtTelNumber.MaxLength = 11;
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtTelNumber.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txtTelNumber.Text = txtTelNumber.Text.Remove(txtTelNumber.Text.Length - 1);
+            }
+        } 
+        #endregion
+
+        #region [- txtPhoneNumber_TextChanged -]
+        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            txtPhoneNumber.MaxLength = 11;
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtPhoneNumber.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txtPhoneNumber.Text = txtPhoneNumber.Text.Remove(txtPhoneNumber.Text.Length - 1);
+            }
+
+            
         } 
         #endregion
     }
