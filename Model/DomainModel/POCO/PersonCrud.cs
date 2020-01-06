@@ -71,7 +71,56 @@ namespace Model.DomainModel.POCO
         }
         #endregion
 
+        #region  [- Edit(DTO.EF.Person person) -]
+        public void Edit(DTO.EF.Person person)
+        {
+            using (var context = new Model.DomainModel.DTO.EF.ContactEntities1())
+            {
+                try
+                {
+                    context.Person.Attach(person);
+                    context.Entry(person).State = System.Data.Entity.EntityState.Modified;
+                    context.SaveChanges();
+                }
+                catch (Exception)
+                {
 
+                    throw;
+                }
+                finally
+                {
+                    context.Dispose();
+                }
+
+            }
+        }
+
+        #endregion
+
+        #region  [- Delete(DTO.EF.Person person) -]
+        public void Delete(DTO.EF.Person person)
+        {
+            using (var context = new Model.DomainModel.DTO.EF.ContactEntities1())
+            {
+                try
+                {
+                    context.Entry(person).State = System.Data.Entity.EntityState.Deleted;
+                    context.SaveChanges();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                finally
+                {
+                    context.Dispose();
+                }
+
+            }
+        }
+
+        #endregion
 
         #endregion
     }
