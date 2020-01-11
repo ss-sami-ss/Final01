@@ -132,7 +132,7 @@
             this.dgvPerson.Size = new System.Drawing.Size(555, 248);
             this.dgvPerson.TabIndex = 9;
             this.dgvPerson.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPerson_CellDoubleClick);
-            this.dgvPerson.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPerson_CellMouseClick);
+
             // 
             // idDataGridViewTextBoxColumn
             // 

@@ -75,10 +75,29 @@ namespace View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+ 
             Ref_PersonViewModel.Save(txtFirstName.Text, txtLastName.Text, txtIdentityCode.Text,
             txtTelNumber.Text, txtPhoneNumber.Text);
             FillGrid();
-            MessageBox.Show("It's Done!");
+           
+            if (txtFirstName.Text == "" || txtFirstName.Text == "")
+            {
+                
+                MessageBox.Show("Please Enter Fill Boxes. ");
+            }
+            else if (txtIdentityCode.Text == "" || txtTelNumber.Text == "")
+            {
+
+                MessageBox.Show("Please Enter Fill Boxes. ");
+            }
+            else if (txtPhoneNumber.Text == "")
+            {
+                MessageBox.Show("Please Enter Fill Boxes. ");
+            }
+            else
+            {
+                MessageBox.Show("It's Done!");
+            }
         }
 
         #endregion
@@ -129,14 +148,24 @@ namespace View
         {
             Ref_PersonViewModel.Edit(Ref_PersonViewModel.Person.Id, txtFirstName.Text, txtLastName.Text, txtIdentityCode.Text, txtTelNumber.Text, txtPhoneNumber.Text);
             FillGrid();
-            MessageBox.Show("You Contact is Update.");
-        }
-        #endregion
+            if (txtFirstName.Text == "" || txtFirstName.Text == "")
+            {
+                MessageBox.Show("Please Enter Fill Boxes. ");
+            }
+            else if (txtIdentityCode.Text == "" || txtTelNumber.Text == "")
+            {
 
-        #region [- dgvPerson_CellMouseClick -]
-        private void dgvPerson_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            MessageBox.Show("Please Double click on Row to Edit And Delete Them.");
+                MessageBox.Show("Please Enter Fill Boxes. ");
+            }
+            else if (txtPhoneNumber.Text == "")
+            {
+                MessageBox.Show("Please Enter Fill Boxes. ");
+            }
+            else
+            {
+                MessageBox.Show("You Contact is Update.");
+            }
+            
         }
         #endregion
 
