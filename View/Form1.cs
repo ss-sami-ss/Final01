@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
-using Model.DomainModel.DTO.EF;
 using ViewModel;
+
 
 namespace View
 {
@@ -27,6 +28,7 @@ namespace View
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.MinimumSize = new Size(980, 415);
             personTableAdapter.Fill(contactDataSet.Person);
             FillGrid();
         }
@@ -76,7 +78,7 @@ namespace View
             Ref_PersonViewModel.Save(txtFirstName.Text, txtLastName.Text, txtIdentityCode.Text,
             txtTelNumber.Text, txtPhoneNumber.Text);
             FillGrid();
-            MessageBox.Show("Your Contact Are Expanded");
+            MessageBox.Show("It's Done!");
         }
 
         #endregion
@@ -126,6 +128,7 @@ namespace View
         {
             Ref_PersonViewModel.Edit(Ref_PersonViewModel.Person.Id, txtFirstName.Text, txtLastName.Text, txtIdentityCode.Text, txtTelNumber.Text, txtPhoneNumber.Text);
             FillGrid();
+            MessageBox.Show("You Contact is Update.");
         }
         #endregion
 

@@ -48,11 +48,16 @@ namespace Model.DomainModel.POCO
                 try
                 {
                     var person = new DTO.EF.Person();
+                    
                     person.FirstName = fName;
                     person.LastName = lName;
                     person.IdentityCode = identityCode;
                     person.TelephoneNumber = telNumber;
                     person.PhoneNumber = phoneNumber;
+                    if (true)
+                    {
+
+                    }
                     context.Person.Add(person);
                     context.SaveChanges();
 

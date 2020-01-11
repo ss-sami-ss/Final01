@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model.DomainModel.DTO.EF;
+﻿using Model.DomainModel.DTO.EF;
+using Model.DomainModel.POCO;
 
 namespace ViewModel
 {
@@ -12,14 +8,14 @@ namespace ViewModel
         #region [- ctor -]
         public PersonViewModel()
         {
-            Ref_PersonCrud = new Model.DomainModel.POCO.PersonCrud();
+            Ref_PersonCrud = new PersonCrud();
             Person = new Person();
         }
         #endregion
 
         #region [- props -]
-        public Model.DomainModel.POCO.PersonCrud Ref_PersonCrud { get; set; }
-        public Model.DomainModel.DTO.EF.Person   Person { get;private set; }
+        public PersonCrud Ref_PersonCrud { get; set; }
+        public Person   Person { get;private set; }
         #endregion
 
         #region [- FillGrid() -]
@@ -39,7 +35,7 @@ namespace ViewModel
         #region [- Edit(int id, string firstName, string lastName, string identityCode, string telNumber, string phoneNumber)-]
         public void Edit(int id ,string firstName,string lastName,string identityCode,string telNumber,string phoneNumber)
         {
-            Person = new Model.DomainModel.DTO.EF.Person
+            Person = new Person
             {
                 Id = id,FirstName=firstName,LastName=lastName,IdentityCode=identityCode,TelephoneNumber= telNumber
                 ,
@@ -53,7 +49,7 @@ namespace ViewModel
         #region [- Delete(int id, string firstName, string lastName, string identityCode, string telNumber, string phoneNumber)-]
         public void Delete(int id, string firstName, string lastName, string identityCode, string telNumber, string phoneNumber)
         {
-            Person = new Model.DomainModel.DTO.EF.Person
+            Person = new Person
             {
                 Id = id,
                 FirstName = firstName,
