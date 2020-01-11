@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -68,7 +69,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(303, 3);
+            this.btnRefresh.Location = new System.Drawing.Point(301, 3);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(141, 33);
             this.btnRefresh.TabIndex = 0;
@@ -78,7 +79,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(153, 3);
+            this.btnSave.Location = new System.Drawing.Point(152, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(141, 33);
             this.btnSave.TabIndex = 1;
@@ -88,7 +89,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(453, 3);
+            this.btnEdit.Location = new System.Drawing.Point(450, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(141, 33);
             this.btnEdit.TabIndex = 2;
@@ -98,7 +99,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(603, 3);
+            this.btnDelete.Location = new System.Drawing.Point(599, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(141, 33);
             this.btnDelete.TabIndex = 3;
@@ -128,7 +129,7 @@
             this.dgvPerson.DataSource = this.personBindingSource;
             this.dgvPerson.Location = new System.Drawing.Point(3, 3);
             this.dgvPerson.Name = "dgvPerson";
-            this.dgvPerson.Size = new System.Drawing.Size(541, 248);
+            this.dgvPerson.Size = new System.Drawing.Size(555, 248);
             this.dgvPerson.TabIndex = 9;
             this.dgvPerson.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPerson_CellDoubleClick);
             this.dgvPerson.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPerson_CellMouseClick);
@@ -187,9 +188,9 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(753, 3);
+            this.btnExit.Location = new System.Drawing.Point(748, 3);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(141, 33);
+            this.btnExit.Size = new System.Drawing.Size(149, 33);
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -203,7 +204,7 @@
             // 
             this.btnClear.Location = new System.Drawing.Point(3, 3);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(144, 33);
+            this.btnClear.Size = new System.Drawing.Size(143, 33);
             this.btnClear.TabIndex = 16;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -222,7 +223,7 @@
             // 
             this.txtFirstName.Location = new System.Drawing.Point(110, 3);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(156, 20);
+            this.txtFirstName.Size = new System.Drawing.Size(217, 20);
             this.txtFirstName.TabIndex = 4;
             // 
             // label1
@@ -238,7 +239,7 @@
             // 
             this.txtLastName.Location = new System.Drawing.Point(110, 53);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(156, 20);
+            this.txtLastName.Size = new System.Drawing.Size(217, 20);
             this.txtLastName.TabIndex = 5;
             // 
             // label3
@@ -254,7 +255,7 @@
             // 
             this.txtIdentityCode.Location = new System.Drawing.Point(110, 103);
             this.txtIdentityCode.Name = "txtIdentityCode";
-            this.txtIdentityCode.Size = new System.Drawing.Size(156, 20);
+            this.txtIdentityCode.Size = new System.Drawing.Size(217, 20);
             this.txtIdentityCode.TabIndex = 6;
             this.txtIdentityCode.TextChanged += new System.EventHandler(this.txtIdentityCode_TextChanged);
             // 
@@ -262,7 +263,7 @@
             // 
             this.txtTelNumber.Location = new System.Drawing.Point(110, 153);
             this.txtTelNumber.Name = "txtTelNumber";
-            this.txtTelNumber.Size = new System.Drawing.Size(156, 20);
+            this.txtTelNumber.Size = new System.Drawing.Size(217, 20);
             this.txtTelNumber.TabIndex = 7;
             this.txtTelNumber.TextChanged += new System.EventHandler(this.txtTelNumber_TextChanged);
             // 
@@ -288,7 +289,7 @@
             // 
             this.txtPhoneNumber.Location = new System.Drawing.Point(110, 203);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(156, 20);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(217, 20);
             this.txtPhoneNumber.TabIndex = 8;
             this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             // 
@@ -344,7 +345,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(900, 39);
             this.tableLayoutPanel2.TabIndex = 18;
             // 
@@ -357,12 +358,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Controls.Add(this.dgvPerson, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(391, 41);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(383, 41);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(547, 254);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(561, 254);
             this.tableLayoutPanel3.TabIndex = 19;
             // 
             // Form1
@@ -373,8 +374,9 @@
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Saman_Project";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personBindingSource)).EndInit();

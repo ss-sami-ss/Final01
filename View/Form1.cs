@@ -99,6 +99,7 @@ namespace View
             
             Ref_PersonViewModel.Delete(Ref_PersonViewModel.Person.Id,Ref_PersonViewModel.Person.FirstName,Ref_PersonViewModel.Person.LastName,Ref_PersonViewModel.Person.IdentityCode,Ref_PersonViewModel.Person.TelephoneNumber,Ref_PersonViewModel.Person.PhoneNumber);
             FillGrid();
+            MessageBox.Show("It's Deleted!");
         }
 
         #endregion
@@ -135,7 +136,7 @@ namespace View
         #region [- dgvPerson_CellMouseClick -]
         private void dgvPerson_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
+            MessageBox.Show("Please Double click on Row to Edit And Delete Them.");
         }
         #endregion
 
@@ -143,6 +144,10 @@ namespace View
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
+            Form2 frm = new Form2();
+
+
+            frm.Show();
         }
         #endregion
 
