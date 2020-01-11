@@ -15,6 +15,11 @@ namespace Model.DomainModel.POCO
         }
         #endregion
 
+        #region [- props -]
+
+        public string ErrorMessage { get; set; } 
+        #endregion
+
         #region [- Tasks -]
         #region [- SelectAll() -]
         public List<Model.DomainModel.DTO.EF.Person> SelectAll()
@@ -26,9 +31,9 @@ namespace Model.DomainModel.POCO
                     var q = context.Person.ToList();
                     return q;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
+                    ErrorMessage = ex.Message + " " + ex.TargetSite;
                     throw;
                 }
                 finally
@@ -62,9 +67,9 @@ namespace Model.DomainModel.POCO
                     context.SaveChanges();
 
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
+                    ErrorMessage = ex.Message + " " + ex.TargetSite;
                     throw;
                 }
                 finally
@@ -87,9 +92,9 @@ namespace Model.DomainModel.POCO
                     context.Entry(person).State = System.Data.Entity.EntityState.Modified;
                     context.SaveChanges();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
+                    ErrorMessage = ex.Message + " " + ex.TargetSite;
                     throw;
                 }
                 finally
@@ -112,9 +117,9 @@ namespace Model.DomainModel.POCO
                     context.Entry(person).State = System.Data.Entity.EntityState.Deleted;
                     context.SaveChanges();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-
+                    ErrorMessage = ex.Message + " " + ex.TargetSite;
                     throw;
                 }
                 finally
