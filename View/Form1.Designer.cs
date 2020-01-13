@@ -112,7 +112,8 @@
             this.dgvPerson.AllowUserToOrderColumns = true;
             this.dgvPerson.AllowUserToResizeColumns = false;
             this.dgvPerson.AllowUserToResizeRows = false;
-            this.dgvPerson.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPerson.AutoGenerateColumns = false;
             this.dgvPerson.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -132,7 +133,6 @@
             this.dgvPerson.Size = new System.Drawing.Size(555, 248);
             this.dgvPerson.TabIndex = 9;
             this.dgvPerson.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPerson_CellDoubleClick);
-
             // 
             // idDataGridViewTextBoxColumn
             // 

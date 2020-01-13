@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using ViewModel;
@@ -14,7 +15,9 @@ namespace View
         {
             InitializeComponent();
             Ref_PersonViewModel = new PersonViewModel();
+
         }
+
 
         #endregion
 
@@ -31,7 +34,15 @@ namespace View
             this.MinimumSize = new Size(980, 415);
             personTableAdapter.Fill(contactDataSet.Person);
             FillGrid();
+            initView();
         }
+
+        #region [- initView -]
+        private void initView()
+        {
+            changeStatusEnabledButtons(false);
+        } 
+        #endregion
 
         #endregion
 
@@ -40,6 +51,7 @@ namespace View
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             FillGrid();
+            initView();
         }
 
         #endregion
@@ -75,29 +87,37 @@ namespace View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
- 
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+            {
+                MessageBox.Show("Please Fill FirstName");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtLastName.Text))
+            {
+                MessageBox.Show("Please Fill LastName");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtIdentityCode.Text))
+            {
+                MessageBox.Show("Please Fill IdentityCode");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtPhoneNumber.Text))
+            {
+                MessageBox.Show("Please Fill PhoneNumber");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtTelNumber.Text))
+            {
+                MessageBox.Show("Please Fill TelNumber");
+                return;
+            }
             Ref_PersonViewModel.Save(txtFirstName.Text, txtLastName.Text, txtIdentityCode.Text,
             txtTelNumber.Text, txtPhoneNumber.Text);
             FillGrid();
-           
-            if (txtFirstName.Text == "" || txtFirstName.Text == "")
-            {
-                
-                MessageBox.Show("Please Enter Fill Boxes. ");
-            }
-            else if (txtIdentityCode.Text == "" || txtTelNumber.Text == "")
-            {
+            MessageBox.Show("It's Done!");
 
-                MessageBox.Show("Please Enter Fill Boxes. ");
-            }
-            else if (txtPhoneNumber.Text == "")
-            {
-                MessageBox.Show("Please Enter Fill Boxes. ");
-            }
-            else
-            {
-                MessageBox.Show("It's Done!");
-            }
+
         }
 
         #endregion
@@ -115,10 +135,11 @@ namespace View
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
+          
             Ref_PersonViewModel.Delete(Ref_PersonViewModel.Person.Id,Ref_PersonViewModel.Person.FirstName,Ref_PersonViewModel.Person.LastName,Ref_PersonViewModel.Person.IdentityCode,Ref_PersonViewModel.Person.TelephoneNumber,Ref_PersonViewModel.Person.PhoneNumber);
             FillGrid();
             MessageBox.Show("It's Deleted!");
+            changeStatusEnabledButtons(false);
         }
 
         #endregion
@@ -140,6 +161,8 @@ namespace View
             txtPhoneNumber.Text = Ref_PersonViewModel.Person.PhoneNumber;
             txtTelNumber.Text = Ref_PersonViewModel.Person.TelephoneNumber;
             txtIdentityCode.Text = Ref_PersonViewModel.Person.IdentityCode;
+
+            changeStatusEnabledButtons(true);
         } 
         #endregion
 
@@ -165,7 +188,7 @@ namespace View
             {
                 MessageBox.Show("You Contact is Update.");
             }
-            
+            changeStatusEnabledButtons(false);
         }
         #endregion
 
@@ -173,6 +196,7 @@ namespace View
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
+            changeStatusEnabledButtons(false);
             Form2 frm = new Form2();
 
 
@@ -215,6 +239,15 @@ namespace View
             }
 
             
+        }
+        #endregion
+
+        #region [- changeStatusEnabledButtons -]
+        public void changeStatusEnabledButtons(bool enabled)
+        {
+            btnDelete.Enabled = enabled;
+            btnEdit.Enabled = enabled;
+
         } 
         #endregion
     }
